@@ -1,0 +1,19 @@
+<form id="searchForm">
+  <input type="input" data-ng-model="searchField" data-ng-keyup="keyCheck($event)"/>
+  <datalist id="userList">
+    <option></option>
+  </datalist>
+  <submit>Search</submit>
+
+  <!-- div class="searchResultsContainer"  data-ng-repeat="person in jsonResults | filter: {name: searchField}" -->
+  <div class="searchResultsContainer"  data-ng-repeat="person in jsonResults |  filter: {name: searchField}" >
+      <ul>
+        <li ng-if="person.name.split(' ')[0] === searchField">
+          <p>{{person.name}}</p>
+          <p>Email: {{person.email}}</p>
+          <p>City: {{person.city}}</p>
+          <p>Gender: {{person.gender}}</p>
+        </li>
+      </ul>
+  </div>
+</form>
