@@ -6,9 +6,9 @@
   <submit>Search</submit>
 
   <!-- div class="searchResultsContainer"  data-ng-repeat="person in jsonResults | filter: {name: searchField}" -->
-  <div class="searchResultsContainer"  data-ng-repeat="person in jsonResults |  filter: {name: searchField}" >
+  <div class="searchResultsContainer">
       <ul>
-        <li ng-if="person.name.split(' ')[0] === searchField">
+        <li data-ng-repeat="person in jsonResults |  filter: {name: searchField}"  ng-if="person.name.split(' ')[0].toLowerCase() === searchField.toLowerCase()" ng-class="{'redBorder': person.gender === 'F', 'blueBorder': person.gender === 'M'}">
           <p>{{person.name}}</p>
           <p>Email: {{person.email}}</p>
           <p>City: {{person.city}}</p>

@@ -7,6 +7,29 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 #searchForm{
   padding-top: 10px;
 }
+.searchResultsContainer{
+  margin: 0px;
+}
+.searchResultsContainer ul{
+  list-style: none;
+  margin: 0px;
+
+}
+
+.searchResultsContainer li{
+  float: left;
+  padding: 10px;
+  margin-left: 20px;
+
+}
+
+.redBorder{
+    border: 1px solid red;
+}
+
+.blueBorder{
+  border: 1px solid  blue;
+}
 
 .browsehappy {
   margin: 0.2em 0;
